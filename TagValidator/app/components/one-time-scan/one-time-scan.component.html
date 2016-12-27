@@ -39,7 +39,7 @@
 <tr *ngFor="let scan of scanData">
     <td>{{scan.name}}
         <div class="resp-tag table-btns-design2">
-            <span>{{scan.date_created}}</span>
+            <span>{{scan.date_created  | date: 'dd/MM/yyyy'}}</span>
             <div class="table-btns responsive-btns">
             <button class="btn"><i class="download-icon-2" aria-hidden="true"></i> Error
                 Report
@@ -50,7 +50,7 @@
         </div>
         </div>
     </td>
-    <td>{{scan.date_created}}</td>
+    <td>{{scan.date_created  | date: 'dd/MM/yyyy'}}</td>
     <td>{{scan.url}}</td>
     <td>{{scan.adobe_stats?.coverage}}
     </td>

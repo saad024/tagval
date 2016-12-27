@@ -12,6 +12,11 @@ import "./user";
 
 export class CreateUserComponent{
 
+	createUser : any = {
+		   createName : '',
+		   userEmail : ''
+	   };
+
 	 constructor(private _tableService: TableApiService){}
 
 

@@ -26,7 +26,6 @@ export class TableApiService{
         let scan_url = this._url + '/api/scans/'
         let headers = new Headers();    
         let auth_token = localStorage.getItem('auth_token');
-         console.log(auth_token);
         headers.append("Authorization","Token " + auth_token);
         return this._http.get(scan_url,{headers: headers})
             .map(response => response.json())

@@ -8,6 +8,7 @@ import { TableApiService } from '../../services/table-api.service';
 	styleUrls : ['one-time-scan.component.css']
 })
 export class OneTimeScanComponent implements OnInit{
+
     
 @Input() scanData: any; 
 

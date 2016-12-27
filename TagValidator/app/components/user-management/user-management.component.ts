@@ -16,7 +16,7 @@ export class UserManagementComponent implements OnInit {
             this._tableService.getUsersData()
             .subscribe(users => {
                 this.users = users.results;
-                console.log(this.users);
+                // console.log(this.users);
             });
     }
 

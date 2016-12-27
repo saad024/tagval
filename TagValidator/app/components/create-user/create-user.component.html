@@ -10,8 +10,8 @@
                     <div class="scan-info-form">
                         <!-- Name input-->
                         <div class="scan-info-fields">
-                            <span class="input" >
-                              <input ngModel name="createName" class="input__field input__field_box" type="text" id="createName" />
+                            <span class="input" [class.input--filled]="createUser.createName !=''">
+                              <input [(ngModel)]="createUser.createName" name="createName" class="input__field input__field_box" type="text" id="createName" />
                               <label class="input__label input__label" for="createName">
                                 <span class="input__label-content">Name</span>
                              </label>
@@ -19,8 +19,8 @@
                          </div>
                         <!--Email-->
                         <div class="scan-info-fields">
-                            <span class="input" >
-                              <input ngModel name="userEmail"  class="input__field input__field_box" type="text" id="userEmail" />
+                            <span class="input" [class.input--filled]="createUser.userEmail !=''">
+                              <input [(ngModel)]="createUser.userEmail" name="userEmail"  class="input__field input__field_box" type="text" id="userEmail" />
                               <label class="input__label input__label" for="userEmail">
                                 <span class="input__label-content">Email</span>
                              </label>
@@ -35,7 +35,7 @@
                             <div class="form-fields">
                                 <label class="control-label" for="userType">User Type</label>
                                 <div class="form-input drop_list">
-                                    <select ngModel id="userType" name="selectUser" class="form-control">
+                                    <select id="userType" name="selectUser" class="form-control">
                                         <option value="super_admin">Super Admin</option>
                                         <option value="admin">Admin</option>
                                         <option value="user">User</option>
@@ -47,10 +47,10 @@
                         <div class="form-fields">
                             <label class=" control-label" for="clientName">Clients</label>
                                 <div class="form-input drop_list">
-                                    <select ngModel id="clientName" name="selectClient" class="form-control">
-                                        <option value="client 1">Client 1</option>
-                                        <option value="client 2">Client 2</option>
-                                        <option value="client 3">Client 3</option>
+                                    <select id="clientName" name="selectClient" class="form-control">
+                                        <option value="client_1">Client 1</option>
+                                        <option value="client_2">Client 2</option>
+                                        <option value="client_3">Client 3</option>
                                     </select>
                                 </div>
                         </div>

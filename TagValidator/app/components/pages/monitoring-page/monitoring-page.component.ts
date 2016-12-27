@@ -19,7 +19,7 @@ export class MonitoringPageComponent  implements OnInit{
 		this._tableService.getScansData()
 		.subscribe(webscans => {
 			this.webScans = webscans.results;
-			console.log(this.webScans);
+			// console.log(this.webScans);
 		});
     }
 

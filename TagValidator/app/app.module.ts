@@ -32,6 +32,8 @@ import { MonitoringPageComponent }  from './components/pages/monitoring-page/mon
 import { TableApiService }  from './services/table-api.service';
 import { AuthService }  from './services/auth.service';
 
+import { ExponentialStrengthPipe }  from './pipes/search.pipe';
+
 import { AppRoutingModule }     from './app-routing.module';
 
 
@@ -69,13 +71,17 @@ import { AppRoutingModule }     from './app-routing.module';
   UserManagementPageComponent,
   EditUserPageComponent,
   CreateUserPageComponent,
-  MonitoringPageComponent
+  MonitoringPageComponent,
+
+  ExponentialStrengthPipe
    ],
 
   providers: [
     AuthService,
     TableApiService
   ],
+
+  
 
   bootstrap:    [ AppComponent ]
 })
