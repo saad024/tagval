@@ -1,0 +1,700 @@
+
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+
+
+    /*top dropdown*/
+    .chart-table-dropdown {
+        margin-bottom: 32px;
+        float: left;
+        width: 100%;
+    }
+
+    /*top dropdown-end*/
+
+      /*main-table*/
+    .one-time-tbl table tr th {
+        font-size: 13px;
+        padding: 12px 10px;
+    }
+    .table-btns{
+        min-width: auto;
+    }
+    .table-btns-design1{
+        display: none;
+    }
+    .table-btns-design2{
+        display: block;
+    }
+    .one-time-tbl table tr th:nth-child(1),
+    .one-time-tbl table tr td:nth-child(1){
+        display: none;
+    }
+.main-tbl table tr th {
+    white-space: normal;
+}
+
+    /*main-table-end*/
+
+
+
+}
+
+@media (max-width: 1023px) and (min-width: 992px) {
+
+
+    /*top dropdown*/
+
+    .chart-table-dropdown {
+        margin-bottom: 32px;
+        float: left;
+        width: 100% ;
+    }
+
+    /*top dropdown-end*/
+
+      /*main-table*/
+    .one-time-tbl table tr th {
+        font-size: 12px;
+    }
+    .table-btns{
+        min-width: auto;
+    }
+    .table-btns-design1{
+        display: none;
+    }
+    .table-btns-design2{
+        display: block;
+    }
+    .one-time-tbl table tr th:nth-child(1),
+    .one-time-tbl table tr td:nth-child(1){
+        display: none;
+    }
+    .main-tbl table tr th {
+    white-space: normal;
+}
+
+    /*main-table-end*/
+
+
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+
+    /*top dropdown*/
+
+    .chart-table-dropdown {
+        margin-bottom: 32px;
+        float: left;
+        width: 100%;
+    }
+
+    /*top dropdown-end*/
+
+    /*main-table*/
+    .one-time-tbl table tr th {
+        font-size: 12px;
+    }
+
+
+
+    .one-time-tbl table tbody tr td {
+        padding: 24px 10px;
+    }
+
+    .pg-track-org,
+    .tbl-quality {
+        display: none;
+    }
+
+    .pg-trackd-th,
+    .tbl-quality-resp {
+        display: block;
+    }
+    .table-btns{
+        min-width: auto;
+    }
+    .table-btns-design1{
+        display: none;
+    }
+    .table-btns-design2{
+        display: block;
+    }
+
+    .one-time-tbl table tr th:nth-child(2),
+    .one-time-tbl table tr td:nth-child(2),
+    .one-time-tbl table tr th:nth-child(6),
+    .one-time-tbl table tr td:nth-child(6),
+    .one-time-tbl table tr th:nth-child(7),
+    .one-time-tbl table tr td:nth-child(7){
+        display: none;
+    }
+    .tbl-resp-edit{
+        display: block;
+    }
+    .resp-tag{
+        display: block;
+    }
+    .main-tbl table tr th {
+    white-space: normal;
+    }
+
+    /*main-table-end*/
+
+}
+
+@media (max-width: 767px) and (min-width: 685px) {
+
+
+   /*top dropdown*/
+
+    .chart-btn ul {
+        width: 100%;
+    }
+
+    .chart-dropdwn {
+        border: 1px solid #e1e1e1;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .chart-btn {
+        border-right: none;
+    }
+
+    .table-proprties ul {
+        padding: 0;
+    }
+
+    .table-proprties ul li {
+        margin-right: 7px;
+    }
+
+    .table-proprties ul li span {
+        margin-right: 6px;
+    }
+
+    .dropdown-checks ul li {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .dropdown-checks ul li .labls {
+        float: left;
+    }
+
+    .chart-btn .btn {
+        width: 100%;
+        text-align: left;
+        float: left;
+    }
+
+    .chart-btn .btn .arrow {
+        text-align: right;
+        float: right;
+    }
+
+    .chart-dropdwn .chart-btn {
+        float: left;
+        width: 100%;
+    }
+
+    .chart-table-dropdown {
+        margin: 0;
+        width: 100% !important;
+    }
+    .seach-input span {
+       top: 10px;
+       left: 14px;
+    }
+    .seach-input {
+    width: 100%;
+    }
+
+    /*top dropdown-end*/
+
+       /*main-table*/
+    .one-time-tbl table tr th:nth-child(2),
+    .one-time-tbl table tr th:nth-child(3),
+    .one-time-tbl table tr th:nth-child(6),
+    .one-time-tbl table tr th:nth-child(7),
+    .one-time-tbl table tbody tr td:nth-child(2),
+    .one-time-tbl table tbody tr td:nth-child(3),
+    .one-time-tbl table tbody tr td:nth-child(6),
+    .one-time-tbl table tbody tr td:nth-child(7) {
+        display: none;
+    }
+
+    .resp-tag {
+        display: block;
+    }
+
+    .tbl-resp-edit {
+        display: block;
+    }
+
+    .one-time-tbl table tbody tr td {
+        color: #1a1d25;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .one-time-tbl table tbody tr td:nth-child(4),
+    .one-time-tbl table tbody tr td:nth-child(5) {
+        text-align: center;
+    }
+
+    .tbl-frndly-name {
+        display: none;
+    }
+
+    .pg-track-org,
+    .tbl-quality {
+        display: none;
+    }
+
+    .pg-trackd-th,
+    .tbl-quality-resp {
+        display: block;
+    }
+
+    .one-time-tbl table tr th {
+        font-size: 11px;
+    }
+
+    .table-btns{
+        min-width: auto;
+    }
+    .main-tbl table tr th {
+    white-space: normal;
+}
+.main-tbl table tbody tr td a {
+    font-size: 12px;
+}
+    
+    /*main-table-end*/
+
+}
+
+@media (max-width: 684px) and (min-width: 568px) {
+
+    /*top dropdown*/
+
+    .chart-btn ul {
+        width: 100%;
+    }
+
+    .chart-dropdwn {
+        border: 1px solid #e1e1e1;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .chart-btn {
+        border-right: none;
+    }
+
+    .table-proprties ul {
+        padding: 0;
+    }
+
+    .table-proprties ul li {
+        margin-right: 7px;
+    }
+
+    .table-proprties ul li span {
+        margin-right: 6px;
+    }
+
+    .dropdown-checks ul li {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .dropdown-checks ul li .labls {
+        float: left;
+    }
+
+    .chart-btn .btn {
+        width: 100%;
+        text-align: left;
+        float: left;
+    }
+
+    .chart-btn .btn .arrow {
+        text-align: right;
+        float: right;
+    }
+
+    .chart-dropdwn .chart-btn {
+        float: left;
+        width: 100%;
+    }
+
+    .chart-table-dropdown {
+        margin: 0;
+        width: 100% !important;
+    }
+    .seach-input {
+    width: 100%;
+    }
+    .seach-input span {
+    top: 10px;
+    left: 14px;
+    }
+    .seach-input input{
+    padding: 19px 35px;
+}
+
+    /*top dropdown-end*/
+
+       /*main-table*/
+    .one-time-tbl table tr th:nth-child(2),
+    .one-time-tbl table tr th:nth-child(3),
+    .one-time-tbl table tr th:nth-child(6),
+    .one-time-tbl table tr th:nth-child(7),
+    .one-time-tbl table tbody tr td:nth-child(2),
+    .one-time-tbl table tbody tr td:nth-child(3),
+    .one-time-tbl table tbody tr td:nth-child(6),
+    .one-time-tbl table tbody tr td:nth-child(7) {
+        display: none;
+    }
+
+    .resp-tag {
+        display: block;
+    }
+
+    .tbl-resp-edit {
+        display: block;
+    }
+
+    .one-time-tbl table tbody tr td {
+        color: #1a1d25;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .one-time-tbl table tbody tr td:nth-child(4),
+    .one-time-tbl table tbody tr td:nth-child(5) {
+        text-align: center;
+    }
+
+    .tbl-frndly-name {
+        display: none;
+    }
+
+    .pg-track-org,
+    .tbl-quality {
+        display: none;
+    }
+
+    .pg-trackd-th,
+    .tbl-quality-resp {
+        display: block;
+    }
+
+    .one-time-tbl table tr th {
+        font-size: 11px;
+    }
+
+    .table-btns{
+        min-width: auto;
+    }
+    .main-tbl table tr th {
+    white-space: normal;
+   }
+.main-tbl table tbody tr td a {
+    font-size: 12px;
+}
+    
+    /*main-table-end*/
+
+}
+
+@media (max-width: 567px) and (min-width: 480px) {
+
+
+    /*top dropdown*/
+
+    .chart-btn ul {
+        width: 100%;
+    }
+
+    .chart-dropdwn {
+        border: 1px solid #e1e1e1;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .chart-btn {
+        border-right: none;
+    }
+
+    .table-proprties ul {
+        padding: 0;
+    }
+
+    .table-proprties ul li {
+        margin-right: 7px;
+    }
+
+    .table-proprties ul li span {
+        margin-right: 6px;
+    }
+
+    .dropdown-checks ul li {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .dropdown-checks ul li .labls {
+        float: left;
+    }
+
+    .chart-btn .btn {
+        width: 100%;
+        text-align: left;
+        float: left;
+    }
+
+    .chart-btn .btn .arrow {
+        text-align: right;
+        float: right;
+    }
+
+    .chart-dropdwn .chart-btn {
+        float: left;
+        width: 100%;
+    }
+
+    .chart-table-dropdown {
+        margin: 0;
+        width: 100% !important;
+    }
+    .seach-input span {
+    top: 10px;
+    left: 14px;
+    }
+    .seach-input {
+    width: 100%;
+    }
+    .seach-input input{
+    padding: 19px 35px;
+}
+
+    /*top dropdown-end*/
+
+
+    /*main-table*/
+    .one-time-tbl table tr th:nth-child(2),
+    .one-time-tbl table tr th:nth-child(3),
+    .one-time-tbl table tr th:nth-child(6),
+    .one-time-tbl table tr th:nth-child(7),
+    .one-time-tbl table tbody tr td:nth-child(2),
+    .one-time-tbl table tbody tr td:nth-child(3),
+    .one-time-tbl table tbody tr td:nth-child(6),
+    .one-time-tbl table tbody tr td:nth-child(7) {
+        display: none;
+    }
+
+    .resp-tag {
+        display: block;
+    }
+
+    .tbl-resp-edit {
+        display: block;
+    }
+
+    .one-time-tbl table tbody tr td {
+        color: #1a1d25;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .one-time-tbl table tbody tr td:nth-child(4),
+    .one-time-tbl table tbody tr td:nth-child(5) {
+        text-align: center;
+    }
+
+    .tbl-frndly-name {
+        display: none;
+    }
+
+    .pg-track-org,
+    .tbl-quality {
+        display: none;
+    }
+
+    .pg-trackd-th,
+    .tbl-quality-resp {
+        display: block;
+    }
+
+    .one-time-tbl table tr th {
+        font-size: 11px;
+    }
+    .table-btns{
+        min-width: auto;
+    }
+    
+    .main-tbl table tr th {
+        padding: 16px 6px 16px 1px;
+        white-space: normal;
+    }
+    .main-tbl table tbody tr td a {
+    font-size: 12px;
+}
+    /*main-table-end*/
+
+
+}
+
+@media (max-width: 479px) and (min-width: 320px) {
+
+
+    /*top dropdown*/
+
+    .chart-btn ul {
+        width: 100%;
+    }
+
+    .chart-dropdwn {
+        border: 1px solid #e1e1e1;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .chart-btn {
+        border-right: none;
+    }
+
+    .table-proprties ul {
+        padding: 0;
+    }
+
+    .table-proprties ul li {
+        margin-right: 7px;
+        font-size: 12px;
+    }
+
+    .table-proprties ul li span {
+        margin-right: 6px;
+        margin-top: 0px;
+    }
+
+    .dropdown-checks ul li {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .dropdown-checks ul li .labls {
+        float: left;
+    }
+
+    .chart-btn .btn {
+        width: 100%;
+        text-align: left;
+        float: left;
+    }
+
+    .chart-btn .btn .arrow {
+        text-align: right;
+        float: right;
+    }
+
+    .chart-dropdwn .chart-btn {
+        float: left;
+        width: 100%;
+    }
+
+    .chart-table-dropdown {
+        margin: 0;
+        width: 100%;
+    }
+    .seach-input span {
+    top: 10px;
+    left: 14px;
+    }
+    .seach-input {
+    width: 100%;
+    }
+    .seach-input input{
+    padding: 19px 35px;
+   }
+
+    /*top dropdown-end*/
+
+     /*main-table*/
+    .one-time-tbl table tr th:nth-child(2),
+    .one-time-tbl table tr th:nth-child(3),
+    .one-time-tbl table tr th:nth-child(6),
+    .one-time-tbl table tr th:nth-child(7),
+    .one-time-tbl table tbody tr td:nth-child(2),
+    .one-time-tbl table tbody tr td:nth-child(3),
+    .one-time-tbl table tbody tr td:nth-child(6),
+    .one-time-tbl table tbody tr td:nth-child(7) {
+        display: none;
+    }
+
+    .resp-tag {
+        display: block;
+    }
+
+    .tbl-resp-edit {
+        display: block;
+    }
+
+    .one-time-tbl table tbody tr td {
+        color: #1a1d25;
+        font-weight: 400;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .one-time-tbl table tbody tr td:nth-child(4),
+    .one-time-tbl table tbody tr td:nth-child(5) {
+        text-align: center;
+    }
+
+    .tbl-frndly-name {
+        display: none;
+    }
+
+    .pg-track-org,
+    .tbl-quality {
+        display: none;
+    }
+
+    .pg-trackd-th,
+    .tbl-quality-resp {
+        display: block;
+    }
+
+    .main-tbl table tr th {
+        font-size: 11px;
+    }
+    .table-btns{
+        min-width: auto;
+    }
+    .main-tbl table tr th {
+    padding: 16px 6px 16px 1px;
+    white-space: normal;
+}
+.main-tbl table tbody tr td a {
+    font-size: 12px;
+}
+  
+
+    /*main-table-end*/
+
+
+}

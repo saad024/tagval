@@ -1,0 +1,80 @@
+<section class="monitor-chart">
+    <div class="container-fluid">
+        <div class="tv-text-content pull-left">
+            <h2>WEBSITE</h2>
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">www.ikea.dk
+                    <i class="dropdown-icon" aria-hidden="true"></i></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">item 1</a></li>
+                    <li><a href="#">item 2</a></li>
+                    <li><a href="#">item 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tv-text-content pull-left">
+            <h2>LAST SCAN</h2>
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">3. OKTOBAR
+                    2016-12:15PM
+                    <i class="dropdown-icon" aria-hidden="true"></i></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">item 1</a></li>
+                    <li><a href="#">item 2</a></li>
+                    <li><a href="#">item 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-6 tv-clear">
+            <div [class]="progressClass">
+                <h4>% OF PAGES TRACKED</h4>
+                <span>{{progressDesc}}</span><i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+
+                <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="tv-circletext">
+                <h1>DESCRIPTION</h1>
+
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                </h2>
+
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>SCHEDULED,COMPLETED,UNDER<br>PROGRESS
+                </h2>
+            </div>
+        </div>
+        <div class="col-sm-6 tv-margin">
+            <div [class]="progressClass_2">
+                <h4>OVERALL DATA QUALITY</h4>
+                <span>{{progressDesc_2}}</span><i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+
+                <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="tv-circletext">
+                <h1>CRITERIA</h1>
+
+                <h2>
+                    <i class="fa fa-check" aria-hidden="true"></i>of the printing and typesetting<br>
+                    <i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum is simply dummy text<br>
+                    <i class="fa fa-check" aria-hidden="true"></i>of the printing and typesetting<br>
+                    <i class="fa fa-check" aria-hidden="true"></i>of the printing and typesetting<br>
+                    <i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum has been<br>
+                    <i class="fa fa-check" aria-hidden="true"></i>of the printing and typesetting<br>
+                </h2>
+
+            </div>
+        </div>
+        <div class="tv-btngrp">
+        <a href="#"><i class="download-icon"></i>ERROR REPORT(.CSV)</a>
+        <a href="#"><i class="download-icon"></i>FULL SCAN REPORT(.CSV)</a>
+    </div>
+    </div>
+    
+</section>

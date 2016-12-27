@@ -1,0 +1,95 @@
+<section class="container-fluid chart-table">
+<div class="table_header">
+<h2>Performed scans</h2>
+<div class="chart-table-dropdown">
+    <dropdown-url></dropdown-url>
+    <dropdown-search></dropdown-search>
+    <dropdown-check></dropdown-check>
+</div>
+<div class="main-tbl one-time-tbl tabl-border">
+<table>
+<tr>
+    <th>
+        <div class="tbl-frndly-name">
+            <span>Friendly Name</span>
+        </div>
+    </th>
+    <th><i class="fa fa-long-arrow-down" aria-hidden="true"></i> Date</th>
+    <th>Website</th>
+    <th>
+        <div class="pg-track-org">
+            % of pages tracked
+        </div>
+
+        <div class="pg-trackd-th">
+            <span>PAGES TRACKED</span>
+        </div>
+    </th>
+    <th>
+        <div class="tbl-quality">
+            Over all data quality
+        </div>
+        <div class="tbl-quality-resp">
+            data quality
+        </div>
+    </th>
+    <th> Download .csv</th>
+    <th></th>
+</tr>
+<tr *ngFor="let scan of scanData">
+    <td>{{scan.name}}
+        <div class="resp-tag table-btns-design2">
+            <span>{{scan.date_created}}</span>
+            <div class="table-btns responsive-btns">
+            <button class="btn"><i class="download-icon-2" aria-hidden="true"></i> Error
+                Report
+            </button>
+            <button class="btn"><i class="download-icon-2" aria-hidden="true"></i> Full Scan
+                Report
+            </button>
+        </div>
+        </div>
+    </td>
+    <td>{{scan.date_created}}</td>
+    <td>{{scan.url}}</td>
+    <td>{{scan.adobe_stats?.coverage}}
+    </td>
+    <td>{{scan.health_rate | number : '1.2-2'}}
+         <div class="tbl-resp-edit">
+            <span><a routerLink="/edit-user">Edit</a></span>
+        </div>
+    </td>
+    <td>
+        <div class="table-btns table-btns-design1">
+            <button class="btn"><i class="download-icon"></i> Error
+                Report
+            </button>
+            <button class="btn"><i class="download-icon"></i> Full Scan
+                Report
+            </button>
+        </div>
+        <div class="resp-tag table-btns-design2">
+            <div class="table-btns responsive-btns">
+            <button class="btn"><i class="download-icon-2" aria-hidden="true"></i> Error
+                Report
+            </button>
+            <button class="btn"><i class="download-icon-2" aria-hidden="true"></i> Full Scan
+                Report
+            </button>
+        </div>
+        </div>
+    </td>
+    <td><a routerLink="/edit-user">Edit</a></td>
+</tr>
+
+</table>
+<div class="table-proprties">
+    <ul>
+        <li><span class="blue-color"></span> Scheduled</li>
+        <li><span class="yellow-color"></span> Progressing</li>
+        <li><span class="green-color"></span> Completed</li>
+    </ul>
+</div>
+</div>
+</div>
+</section>

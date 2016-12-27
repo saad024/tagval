@@ -1,0 +1,49 @@
+<header class="tv-header">
+    <div class="navbar navbar-default tv-nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle {{ collaps ? '': 'collapsed'}}"  (click)= "onClicked()">
+                    <span class="sr-only">show And hide the nav</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="tv-logo"><img src="./app/images/logo2.png" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse {{collaps ? 'in' : ''}} nav-content" id="navbar-container">
+                <ul class="nav navbar-nav tv-left-nav">
+                    <li><a routerLink="/monitoring">Monitoring</a></li>
+                    <li><a routerLink="/one-time">Scan</a></li>
+                    <li><a routerLink="/user-managment">User Managment</a></li>
+                    <li><a routerLink="/scan-info">Scan Info</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right tv-right-nav"> 
+                    <li><a routerLink="/create-scan" class="tv-scan-btn">create scan</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">lkea
+                                <i class="dropdown-icon"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">item 1</a></li>
+                                <li><a href="#">item 2</a></li>
+                                <li><a href="#">item 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                Marianne Godskesen
+                                <i class="dropdown-icon"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">item 1</a></li>
+                                <li><a href="#">item 2</a></li>
+                                <li><a href="#">item 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

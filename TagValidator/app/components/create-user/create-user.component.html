@@ -1,0 +1,67 @@
+
+<section class="single-info-por">
+    <div class="container">
+        <div class="create-title">
+            <h3>Create User</h3>
+        </div>
+        <div class="row single-info-content">
+            <form class="form-horizontal" (ngSubmit)="onSubmit(f)"  #f = "ngForm" >
+                <div class="col-sm-6">
+                    <div class="scan-info-form">
+                        <!-- Name input-->
+                        <div class="scan-info-fields">
+                            <span class="input" >
+                              <input ngModel name="createName" class="input__field input__field_box" type="text" id="createName" />
+                              <label class="input__label input__label" for="createName">
+                                <span class="input__label-content">Name</span>
+                             </label>
+                            </span>
+                         </div>
+                        <!--Email-->
+                        <div class="scan-info-fields">
+                            <span class="input" >
+                              <input ngModel name="userEmail"  class="input__field input__field_box" type="text" id="userEmail" />
+                              <label class="input__label input__label" for="userEmail">
+                                <span class="input__label-content">Email</span>
+                             </label>
+                            </span>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="scan-info-form">
+                        <!-- user type-->
+                        <div class="form-fields">
+                            <div class="form-fields">
+                                <label class="control-label" for="userType">User Type</label>
+                                <div class="form-input drop_list">
+                                    <select ngModel id="userType" name="selectUser" class="form-control">
+                                        <option value="super_admin">Super Admin</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="user">User</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!--clients-->
+                        <div class="form-fields">
+                            <label class=" control-label" for="clientName">Clients</label>
+                                <div class="form-input drop_list">
+                                    <select ngModel id="clientName" name="selectClient" class="form-control">
+                                        <option value="client 1">Client 1</option>
+                                        <option value="client 2">Client 2</option>
+                                        <option value="client 3">Client 3</option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 create-scan-btns single-info-btns">
+                <button class="btn">Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+            </form>
+            
+        </div>
+    </div>
+</section>
