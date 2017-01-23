@@ -274,6 +274,7 @@ h1,h2,h3,h4,h5,h6{
 .main-tbl table {
     border-collapse: collapse;
     margin-bottom: 32px;
+    width: 100%;
 }
 
 .main-tbl .table-responsive {
