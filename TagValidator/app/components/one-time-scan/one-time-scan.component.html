@@ -1,0 +1,116 @@
+<section class="container-fluid chart-table">
+    <div class="table_header">
+        <h2>Performed scans</h2>
+        <div class="chart-table-dropdown">
+            <dropdown-url (clickFilterEvent)="onClickFilter($event)" [filterType]="'scan-data'"></dropdown-url>
+            <dropdown-search (searchFilterEvent)="onSearchFilter($event)" [filterType]="'scan-data'"></dropdown-search>
+            <dropdown-check (columnCheckEvent)="onColumnCheck($event)"></dropdown-check>
+        </div>
+        <div class="main-tbl one-time-tbl tabl-border">
+            <table id="oneTimeTable">
+                <tr>
+                    <th [hidden]="!isColumn[0]">
+                        <div class="tbl-frndly-name">
+                            <span>Friendly Name</span>
+                        </div>
+                    </th>
+                    <th [hidden]="!isColumn[1]" class="sortable"><i (click)="sortIt()" class="fa" [class.fa-long-arrow-down]="!isAsc" [class.fa-long-arrow-up]="isAsc"
+                            aria-hidden="true"></i> Date</th>
+                    <th [hidden]="!isColumn[2]">Website</th>
+                    <th [hidden]="!isColumn[3]">
+                        <div class="pg-track-org">
+                            % of pages tracked
+                        </div>
+                        <div class="pg-trackd-th">
+                            <span>PAGES TRACKED</span>
+                        </div>
+                    </th>
+                    <th [hidden]="!isColumn[4]">
+                        <div *ngIf="isColumn[4]" class="tbl-quality">
+                            Over all data quality
+                        </div>
+                        <div *ngIf="isColumn[4]" class="tbl-quality-resp">
+                            data quality
+                        </div>
+                    </th>
+                    <th> Download .csv</th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let scan of scanData">
+                    <td [hidden]="!isColumn[0]"><div *ngIf="isColumn[0]">{{scan.name}}</div>
+                        <div class="resp-tag table-btns-design2">
+                            <span *ngIf="isColumn[1]">{{scan.date_modified  | date: 'dd/MM/yyyy'}}</span>
+                            <div class="table-btns responsive-btns">
+                                <a *ngIf="scan.reports" href="{{scan.reports?.adobe_analytics}}" class="btn">
+                                    <i class="download-icon-2" aria-hidden="true"></i> Error Report
+                                </a>
+                                <a *ngIf="scan.reports" href="{{scan.reports?.rule}}" class="btn">
+                                    <i class="download-icon-2" aria-hidden="true"></i> Full Scan Report
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td [hidden]="!isColumn[1]">{{scan.date_modified | date: 'dd/MM/yyyy'}}</td>
+                    <td [hidden]="!isColumn[2]">{{scan.url}}</td>
+                    <td [hidden]="!isColumn[3]">{{scan.adobe_stats?.coverage * 100}}</td>
+                    <td [hidden]="!isColumn[4]">
+                        <div *ngIf="isColumn[4]">{{(scan.health_rate | number :'1.2-2') * 100}}</div>
+                        <div class="tbl-resp-edit">
+                            <span><a routerLink="/edit-user">Edit</a></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="table-btns table-btns-design1">
+
+                            <a *ngIf="scan.reports" href="{{scan.reports?.adobe_analytics}}" class="btn"><i class="download-icon"></i> Error
+                Report
+            </a>
+                            <a *ngIf="scan.reports" href="{{scan.reports?.rule}}" class="btn"><i class="download-icon"></i> Full Scan
+                Report
+            </a>
+                        </div>
+                        <div class="resp-tag table-btns-design2">
+                            <div class="table-btns responsive-btns">
+                                <a *ngIf="scan.reports" href="{{scan.reports?.adobe_analytics}}" class="btn"><i class="download-icon-2"></i> Error
+                Report
+            </a>
+                                <a *ngIf="scan.reports" href="{{scan.reports?.rule}}" class="btn"><i class="download-icon-2"></i> Full Scan
+                Report
+            </a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><a routerLink="/edit-user">Edit</a></td>
+                </tr>
+
+            </table>
+            <div class="table-footer clearfix">
+                <ul class="table-proprties">
+                    <li><span class="blue-color"></span> Scheduled</li>
+                    <li><span class="yellow-color"></span> Progressing</li>
+                    <li><span class="green-color"></span> Completed</li>
+                </ul>
+                <nav aria-label="">
+                    <ul class="pagination">
+                        <li [class.disabled]="!pagination.first">
+                            <a (click)="setCurrentPage(pagination.first)"><i class="fa fa-angle-double-left"></i></a>
+                        </li>
+                        <li [class.disabled]="!pagination.previous">
+                            <a (click)="setCurrentPage(pagination.previous)"><i class="fa fa-angle-left"></i></a>
+                        </li>
+                        <li *ngFor="let num of pagination.pages" [class.active]="pagination.current == num">
+                            <a (click)="setCurrentPage(num)">{{num}}</a>
+                        </li>
+                        <li [class.disabled]="!pagination.next">
+                            <a (click)="setCurrentPage(pagination.next)"><i class="fa fa-angle-right"></i></a>
+                        </li>
+                        <li [class.disabled]="!pagination.last">
+                            <a (click)="setCurrentPage(pagination.last)"><i class="fa fa-angle-double-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</section>

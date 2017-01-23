@@ -1,0 +1,69 @@
+<section class="container-fluid chart-table">
+    <div class="table_header">
+        <h2>User managment</h2>
+        <div class="drop-down-main">
+            <div class="chart-table-dropdown user-mangmnt-dropdown">
+                <dropdown-url (clickFilterEvent)="onClickFilter($event)" [filterType]="'user-data'"></dropdown-url>
+                <dropdown-search (searchFilterEvent)="onSearchFilter($event)" [filterType]="'user-data'"></dropdown-search>
+            </div>
+            <div class="user-create-user">
+                <button routerLink="/create-user" class="btn">Create new user</button>
+            </div>
+        </div>
+        <div class="main-tbl user-mangmnt-tbl">
+            <table id="userTable">
+                <tr>
+                    <th>
+                        <span class="mang-title">
+                    Name
+                </span>
+                    </th>
+                    <th>E-mails</th>
+                    <th>Companies</th>
+                    <th>User type</th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let user of users">
+                    <td>
+                        {{user.name}}
+                        <div class="mang-name">
+                            <span>{{user.email}}</span>
+                            <!--<span><span *ngFor="let position of user.positions">{{user.positions.positions}} </span></span>-->
+                        </div>
+                    </td>
+                    <td>{{user.email}}</td>
+                    <td><span *ngFor="let position of user.positions">{{position.company?.name}}, </span></td>
+                    <td>{{user.is_superuser? 'Super Admin': user.is_staff? 'Admin': 'User'}}
+                        <div class="user-edit">
+                            <span><a [routerLink]="['/edit-user',user.id]">Edit</a></span>
+                        </div>
+                    </td>
+                    <td><a [routerLink]="['/edit-user',user.id]">Edit</a></td>
+                </tr>
+            </table>
+
+<div class="table-footer clearfix">
+            <nav aria-label="">
+        <ul class="pagination">
+            <li [class.disabled]="!pagination.first">
+                <a (click)="setCurrentPage(pagination.first)"><i class="fa fa-angle-double-left"></i></a>
+            </li>
+            <li [class.disabled]="!pagination.previous">
+                <a (click)="setCurrentPage(pagination.previous)"><i class="fa fa-angle-left"></i></a>
+            </li>
+            <li *ngFor="let num of pagination.pages" [class.active]="pagination.current == num">
+                <a (click)="setCurrentPage(num)">{{num}}</a>
+            </li>
+            <li [class.disabled]="!pagination.next">
+                <a (click)="setCurrentPage(pagination.next)"><i class="fa fa-angle-right"></i></a>
+            </li>
+            <li [class.disabled]="!pagination.last">
+                <a (click)="setCurrentPage(pagination.last)"><i class="fa fa-angle-double-right"></i></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,78 @@
+<section class="single-info-por">
+    <div class="container">
+        <div class="create-title">
+            <h3>Create User</h3>
+        </div>
+        <div class="row single-info-content">
+            <form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="col-sm-6">
+                    <div class="scan-info-form">
+                        <!-- Name input-->
+                        <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="createUser.createName !=''">
+                              <input [(ngModel)]="createUser.createName" name="createName" class="input__field input__field_box" type="text" id="createName" />
+                              <label class="input__label input__label" for="createName">
+                                <span class="input__label-content">Name</span>
+                            </label>
+                            </span>
+                        </div>
+                        <!--Email-->
+                        <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="createUser.userEmail !=''">
+                              <input [(ngModel)]="createUser.userEmail" name="userEmail"  class="input__field input__field_box" type="text" id="userEmail" />
+                              <label class="input__label" for="userEmail">
+                                <span class="input__label-content">Email</span>
+                            </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="scan-info-form">
+                        <!-- user type-->
+                        <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="createUser.selectUser !=''">
+                              <select [(ngModel)]="createUser.selectUser" id="selectUser" name="selectUser" class="input__field input__field_box">
+                                        <option value="super_admin">Super Admin</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="user">User</option>
+                                    </select>
+                              <label class="input__label" for="selectUser">
+                                <span class="input__label-content">User Type</span>
+                            </label>
+                            </span>
+                        </div>
+                        <!--<div class="form-fields">
+                            <div class="form-fields">
+                                <label class="control-label" for="selectUser">User Type</label>
+                                <div class="form-input drop_list">
+                                    <select ngModel id="selectUser" name="selectUser" class="form-control">
+                                        <option value="super_admin">Super Admin</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="user">User</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>-->
+                        <!--clients-->
+                          <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="createUser.selectClient !=''">
+                              <select [(ngModel)]="createUser.selectClient" id="selectClient" name="selectClient" class="input__field input__field_box">
+                                       <option *ngFor="let item of companies" [ngValue]="item.id">{{item.name}}</option>
+                                    </select>
+                              <label class="input__label" for="selectClient">
+                                <span class="input__label-content">Clients</span>
+                            </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 create-scan-btns single-info-btns">
+                    <button class="btn">Cancel</button>
+                    <button class="btn" type="submit">Save</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,76 @@
+<section class="monitor-chart">
+    <div class="container-fluid">
+        <div class="tv-text-content pull-left">
+            <h2>WEBSITE</h2>
+
+            <div class="dropdown">
+                <button (click)="refreshList()" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    {{selectedWeb}} <i class="dropdown-icon" aria-hidden="true"></i></button>
+                <ul class="dropdown-menu">
+                    <li *ngFor="let url of urlsList | unique"><a (click)="onSelectWeb(url)">{{url}}<i class="fa fa-check"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tv-text-content pull-left datepicker-cont">
+            <h2>LAST SCAN</h2>
+            <input [(ngModel)]="selectedDate" (ngModelChange)="onSelectDate()" date-format="DD/MM/YYYY" placeholder="Select Date" ng2-datetime-picker date-only="true" readonly />
+            <!--<div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    {{!selectedDate?'Select Date': selectedDate | date:'dd/MM/yyyy'}}
+                    <i class="dropdown-icon" aria-hidden="true"></i></button>
+                <ul class="dropdown-menu">
+                    <li *ngFor="let item of chartData"><a (click)="onSelectDate(item)">{{item.date_created | date:'dd/MM/yyyy'}}</a></li>
+                </ul>
+            </div>-->
+        </div>
+        <div class="col-sm-6 tv-clear">
+            <div class="c100 big" [ngClass]="trackChart.progressClass">
+                <h4>% OF PAGES TRACKED</h4>
+                <span>{{trackChart.progressDesc}}</span><i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+
+                <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="tv-circletext">
+                <h1>DESCRIPTION</h1>
+
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                </h2>
+
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>SCHEDULED,COMPLETED,UNDER<br>PROGRESS
+                </h2>
+            </div>
+        </div>
+        <div class="col-sm-6 tv-margin">
+            <div class="c100 big" [ngClass]="qualityChart.progressClass">
+                <h4>OVERALL DATA QUALITY</h4>
+                <span>{{qualityChart.progressDesc}}</span><i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+
+                <div class="slice">
+                    <div class="bar"></div>
+                    <div class="fill"></div>
+                </div>
+            </div>
+            <div class="tv-circletext">
+                <h1>CRITERIA</h1>
+
+                <h2>
+                    <i class="fa fa-check" aria-hidden="true"></i>of the printing and typesetting<br>
+                    <i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum is simply dummy text<br>
+                    <i class="fa fa-check" aria-hidden="true"></i>of the printing and typesetting<br>
+                    <i class="fa fa-check" aria-hidden="true"></i>of the printing and typesetting<br>
+                    <i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum has been<br>
+                    <i class="fa fa-check" aria-hidden="true"></i>of the printing and typesetting<br>
+                </h2>
+
+            </div>
+        </div>
+        <div class="tv-btngrp">
+        <a *ngIf="downloadErrorReport != ''" href="{{downloadErrorReport}}"><i class="download-icon"></i> ERROR REPORT (.CSV)</a>               
+        <a *ngIf="downloadFullReport != ''" href="{{downloadFullReport}}"><i class="download-icon"></i>FULL SCAN REPORT(.CSV)</a>
+    </div>
+    </div>
+    
+</section>

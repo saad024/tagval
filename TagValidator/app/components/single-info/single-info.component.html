@@ -1,0 +1,70 @@
+<section class="single-info-por">
+    <div class="container">
+        <div class="create-title">
+            <h3>Scan information</h3>
+        </div>
+        <div class="row single-info-content">
+            <form  class="form-horizontal">
+                <div class="col-sm-6">
+                    <div class="scan-info-form">
+                         <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="singleInfo.fname !=''">
+                              <input [(ngModel)]="singleInfo.fname" name="fname"  class="input__field input__field_box" type="text" />
+                              <label class="input__label input__label">
+                                <span class="input__label-content">Friendly name variable</span>
+                                
+                             </label>
+                            </span>
+                         </div>
+                         <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="singleInfo.api !=''">
+                              <input [(ngModel)]="singleInfo.api" name="api" class="input__field input__field_box" type="password" id="api" />
+                              <label class="input__label input__label" for="api">
+                                <span class="input__label-content">API password</span>
+                             </label>
+                            </span>
+                         </div>
+                         <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="singleInfo.maxNumber !=''">
+                              <input [(ngModel)]="singleInfo.maxNumber" name="maxNumber" class="input__field input__field_box" type="text" id="maxNumber" />
+                              <label class="input__label input__label" for="number">
+                                <span class="input__label-content">Max number of pages</span>
+                             </label>
+                            </span>
+                         </div>
+                         <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="singleInfo.apiUser !=''">
+                              <input [(ngModel)]="singleInfo.apiUser" name="apiUser" class="input__field input__field_box" type="text" id="apiUser" />
+                              <label class="input__label input__label" for="user">
+                                <span class="input__label-content">API user name</span>
+                             </label>
+                            </span>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!--Max speed-->
+                        <div class="scan-info-fields">
+                            <span class="input" [class.input--filled]="singleInfo.maxSpeed !=''">
+                              <input [(ngModel)]="singleInfo.maxSpeed" name="maxSpeed" class="input__field input__field_box" type="text" id="maxSpeed" />
+                              <label class="input__label input__label" for="speed">
+                                <span class="input__label-content">AMax Crawl speed (page/min)</span>
+                             </label>
+                            </span>
+                         </div>
+                    <!--Url scan-->
+                    <div class="form-fields">
+                        <label class=" control-label" for="api_user">URL ,s to scan</label>
+                        <div class="form-input">
+                            <textarea name="url_scan" id="url_scan" rows="11"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="col-sm-12 create-scan-btns single-info-btns">
+                <button routerLink="/user-managment" class="btn">Previous</button>
+                <button routerLink="/monitoring" class="btn">Next</button>
+            </div>
+        </div>
+    </div>
+</section>

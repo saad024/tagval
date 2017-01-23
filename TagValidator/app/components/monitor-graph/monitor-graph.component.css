@@ -1,0 +1,34 @@
+#hChart{
+    height: 400px !important;
+}
+
+@media (max-width: 767px) and (min-width: 685px) {
+    #hChart{
+    height: auto !important;
+}
+}
+
+@media (max-width: 684px) and (min-width: 568px) {
+    #hChart{
+    height: auto !important;
+}
+}
+
+@media (max-width: 567px) and (min-width: 480px) {
+
+    #hChart{
+    height: auto !important;
+}
+
+}
+
+@media (max-width: 479px) and (min-width: 320px) {
+    #hChart{
+    height: auto !important;
+}
+}
+
+
+
+
+

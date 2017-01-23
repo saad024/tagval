@@ -1,0 +1,12 @@
+
+.chart-table{
+    padding-top: 32px;
+}
+
+th.sortable>i{
+    opacity: 0;
+    cursor: pointer;
+}
+th.sortable:hover>i{
+    opacity: 1;
+}

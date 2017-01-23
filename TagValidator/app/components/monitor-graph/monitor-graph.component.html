@@ -1,0 +1,11 @@
+<section class="container-fluid chart-display tv-performed-scan">
+    <div class="chart-top-descrp">
+        <h3 class="chart-top-txt">Tagging Progress</h3>
+        <div class="chart-top-btns">
+            <button class="btn" [class.active]="tagVal == 'week'" (click)="setGraphSince('week')">Week</button>
+            <button class="btn" [class.active]="tagVal == 'month'" (click)="setGraphSince('month')">Last month</button>
+            <button class="btn" [class.active]="tagVal == 'three_months'" (click)="setGraphSince('three_months')">Last 3 month</button>
+        </div>
+    </div>
+    <chart [options]="optionsHC" style="display: block" (load)="saveInstance($event.context)"></chart>
+</section>

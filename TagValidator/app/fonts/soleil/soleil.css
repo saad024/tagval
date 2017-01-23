@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family:'Soleil';
+    src: url('Soleil.eot');
+	src: url('Soleil.eot?#iefix') format('embedded-opentype'),
+		url('Soleil.woff2') format('woff2'),
+		url('Soleil.woff') format('woff'),
+		url('Soleil.svg#Soleil') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+@font-face {
+    font-family:'Soleil';
+    src: url('Soleil-Bold.eot');
+	src: url('Soleil-Bold.eot?#iefix') format('embedded-opentype'),
+		url('Soleil-Bold.woff2') format('woff2'),
+		url('Soleil-Bold.woff') format('woff'),
+		url('Soleil-Bold.svg#Soleil-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}

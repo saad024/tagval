@@ -1,0 +1,67 @@
+<div class="chart-dropdwn chart-drop3">
+        <div class="dropdown chart-btn btn-border">
+            <button class="btn btn-primary dropdown-toggle" (click)="showHideDropdown()" data-content="#dropChecks" type="button"
+                    aria-expanded="false">Change metrics
+                <i class="fa arrow" [class.fa-chevron-down]="dropisShown" [class.fa-chevron-up]="!dropisShown" aria-hidden="true"></i></button>
+        </div>
+        <div id="dropChecks" class="container-fluid dropdown-checks" [hidden]="dropisShown">
+            <ul>
+                <li>
+                    <div class="labls float-width">
+                        <label class="check-label">
+                            <input type="checkbox" checked [(ngModel)]="isColumn[0]" (click)="onColumnCheck()"> Friendly Name
+                            <span></span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="labls float-width">
+                        <label class="check-label">
+                            <input type="checkbox" checked [(ngModel)]="isColumn[1]" (click)="onColumnCheck()"> Date
+                            <span></span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="labls float-width">
+                        <label class="check-label">
+                            <input type="checkbox" checked [(ngModel)]="isColumn[2]" (click)="onColumnCheck()"> Website
+                            <span></span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="labls float-width">
+                        <label class="check-label">
+                            <input type="checkbox" checked [(ngModel)]="isColumn[3]" (click)="onColumnCheck()"> % of pages tracked
+                            <span></span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="labls float-width">
+                        <label class="check-label">
+                            <input type="checkbox" checked [(ngModel)]="isColumn[4]" (click)="onColumnCheck()"> Overall data quality
+                            <span></span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="labls float-width">
+                        <label class="check-label">
+                            <input type="checkbox" [(ngModel)]="isColumn[5]" (click)="onColumnCheck()"> Other matric
+                            <span></span>
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="labls float-width">
+                        <label class="check-label">
+                            <input type="checkbox" [(ngModel)]="isColumn[6]" (click)="onColumnCheck()"> Another matric
+                            <span></span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
